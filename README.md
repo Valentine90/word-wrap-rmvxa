@@ -4,7 +4,14 @@
 
 ## Exemplo:
 ```
-text = 'Testando quebra de lina'
+text = 'Testando quebra de linha'
+word_wrap(text, 100).each_with_index do |text, i|
+  draw_text(0, 18 * i, contents_width, 18, text, 1)
+end
+```
+Ou:
+```
+text = "Testando\n quebra de\n linha"
 word_wrap(text, 100).each_with_index do |text, i|
   draw_text(0, 18 * i, contents_width, 18, text, 1)
 end
