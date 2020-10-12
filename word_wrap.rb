@@ -78,4 +78,4 @@ class Window_Base < Window
     return line << cs, lines
   end
   
- end
+end
