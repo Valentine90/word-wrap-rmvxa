@@ -4,14 +4,14 @@
 <p>Quebra de linha para RPG Maker.</p>
 
 ## Exemplos:
-Sem comando de quebra de linha:
+Sem comando de quebra de linha (\n):
 ```
 str = 'Testando quebra de linha'
 word_wrap(str, 100).each_with_index do |text, i|
   draw_text(0, 18 * i, contents_width, 18, text)
 end
 ```
-Com comando de quebra de linha:
+Com comando de quebra de linha (\n):
 ```
 str = "Testando\n quebra de\n linha"
 word_wrap(str, 100).each_with_index do |text, i|
