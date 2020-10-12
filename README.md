@@ -3,7 +3,7 @@
 ![lANG](https://img.shields.io/badge/LANG-RUBY(%20RGSS%20)-red?style=for-the-badge&logo=appveyo)
 <p>Quebra de linha para RPG Maker.</p>
 
-## Exemplo:
+## Exemplos:
 ```
 text = 'Testando quebra de linha'
 word_wrap(text, 100).each_with_index do |text, i|
