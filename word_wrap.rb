@@ -12,7 +12,7 @@ class Window_Base < Window
     # Corrige a compressão de texto do RGD
     width -= 20
     bitmap = contents || Bitmap.new(1, 1)
-    return [text] if bitmap.text_size(text).width <= width
+    return [text] if bitmap.text_size(text).width <= width && !text.include?("\n")
     lines = []
     line = ''
     line_size = 0
