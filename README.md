@@ -1,19 +1,19 @@
-## Sobre
+## About
 ![Rpg Maker VX ACE](https://img.shields.io/badge/RPG%20MAKER-VX%20ACE-red?style=for-the-badge&logo=appveyo)
 ![lANG](https://img.shields.io/badge/LANG-RUBY(%20RGSS%20)-red?style=for-the-badge&logo=appveyo)
-<p>Quebra de linha para RPG Maker.</p>
+<p>Line break for RPG Maker.</p>
 
-## Exemplos:
-Sem comando de quebra de linha (\n):
+## Examples:
+No line break command (\n):
 ```
-str = 'Testando quebra de linha'
+str = 'Testing line breaks'
 word_wrap(str, 100).each_with_index do |text, i|
   draw_text(0, 18 * i, contents_width, 18, text)
 end
 ```
-Com comando de quebra de linha (\n):
+With line break command (\n):
 ```
-str = "Testando\n quebra de\n linha"
+str = "Testing\n line\n breaks"
 word_wrap(str, 100).each_with_index do |text, i|
   draw_text(0, 18 * i, contents_width, 18, text)
 end
