@@ -3,7 +3,7 @@
 ![lANG](https://img.shields.io/badge/LANG-RUBY(%20RGSS%20)-red?style=for-the-badge&logo=appveyo)
 <p>Line break for RPG Maker.</p>
 
-## Examples:
+## Examples
 No line break command (\n):
 ```
 str = 'Testing line breaks'
