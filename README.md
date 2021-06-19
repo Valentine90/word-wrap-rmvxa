@@ -4,14 +4,14 @@
 <p>Line break for RPG Maker.</p>
 
 ## Examples
-No line break command (\n):
+No line break command (`\n`):
 ```Ruby
 str = 'Testing line breaks'
 word_wrap(str, 100).each_with_index do |text, i|
   draw_text(0, 18 * i, contents_width, 18, text)
 end
 ```
-With line break command (\n):
+With line break command (`\n`):
 ```Ruby
 str = "Testing\n line\n breaks"
 word_wrap(str, 100).each_with_index do |text, i|
