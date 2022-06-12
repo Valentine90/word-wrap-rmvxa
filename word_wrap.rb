@@ -10,7 +10,7 @@ class Window_Base < Window
 
   def word_wrap(text, width = contents_width)
     # Corrige a compressão de texto do RGD
-    width -= 20 if defined?(RGD)
+    width -= 20 #if defined?(RGD)
     bitmap = contents || Bitmap.new(1, 1)
     return [text] if bitmap.text_size(text).width <= width && !text.include?("\n")
     lines = []
