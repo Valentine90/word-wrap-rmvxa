@@ -9,13 +9,14 @@
 class Window_Base < Window
 
   def word_wrap(text, width = contents_width)
-    # Corrige a compressão de texto do RGD
+    # Corrige a compressão de texto do RGD.
     width -= 20 #if defined?(RGD)
     bitmap = contents || Bitmap.new(1, 1)
     return [text] if bitmap.text_size(text).width <= width && !text.include?("\n")
     lines = []
     line = ''
     line_width = 0
+    
     text.each_line(' ') do |word|
       word_width = bitmap.text_size(word).width
       if word.include?("\n")
@@ -31,6 +32,7 @@ class Window_Base < Window
         line_width = word_width
       end
     end
+    
     bitmap.dispose unless contents
     lines << line
   end
@@ -38,30 +40,34 @@ class Window_Base < Window
   def skip_line(words, width, bitmap, line, lines, line_width)
     words.each_line do |word|
       # Se a última palavra da matriz não está
-      #acompanhada do comando de quebra de linha
+      # acompanhada do comando de quebra de linha.
       unless word.end_with?("\n")
         line = word
         line_width = bitmap.text_size(word).width
         break
       end
+      
       word = word.delete("\n")
       word_width = bitmap.text_size(word).width
       if line_width + word_width <= width
         # Impede que as linhas sejam alteradas quando a
-        #linha atual for apagada
+        # linha atual for apagada.
         lines << line.clone + word
       else
         lines << line.clone << word
       end
+      
       line.clear
       line_width = 0
     end
+    
     return line, lines, line_width
   end
   
   def character_wrap(word, width, bitmap, line, lines)
     cs = ''
     cs_width = 0
+    
     word.each_char do |c|
       c_width = bitmap.text_size(c).width
       if cs_width + c_width <= width
@@ -75,6 +81,7 @@ class Window_Base < Window
         line.clear
       end
     end
+    
     return line << cs, lines
   end
   
