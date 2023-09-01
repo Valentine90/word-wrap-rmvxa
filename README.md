@@ -9,15 +9,11 @@ No line break command (`\n`):
 ```Ruby
 str = 'Testing line breaks'
 line_width = 100
-word_wrap(str, line_width).each_with_index do |text, i|
-  draw_text(0, 18 * i, contents_width, 18, text)
-end
+draw_text_wrapped(0, 0, line_width, 18, str)
 ```
 With line break command (`\n`):
 ```Ruby
 str = "Testing\n line\n breaks"
 line_width = 100
-word_wrap(str, line_width).each_with_index do |text, i|
-  draw_text(0, 18 * i, contents_width, 18, text)
-end
+draw_text_wrapped(0, 0, line_width, 18, str)
 ```
