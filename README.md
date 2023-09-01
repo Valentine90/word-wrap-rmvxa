@@ -9,11 +9,11 @@ No line break command (`\n`):
 ```Ruby
 str = 'Testing line breaks'
 line_width = 100
-draw_text_wrapped(0, 0, line_width, 18, str)
+draw_text_wrapped(0, 0, line_width, contents.font.size + 2, str)
 ```
 With line break command (`\n`):
 ```Ruby
 str = "Testing\n line\n breaks"
 line_width = 100
-draw_text_wrapped(0, 0, line_width, 18, str)
+draw_text_wrapped(0, 0, line_width, contents.font.size + 2, str)
 ```
