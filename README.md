@@ -5,15 +5,15 @@
 Complete word wrap for RPG Maker. Both lines with multiple words separated by spaces (eg: "text wrapping test") and lines with large text without spaces (eg: "aaaaaaaaaaaaaaaaaaaaaaaa") are broken. It is also possible to manually add a line break by entering the special character `\n`.
 
 ## Examples
-No line break command (`\n`):
+No line break command:
 ```Ruby
-str = 'Testing line breaks'
+text = 'Testing line breaks'
 line_width = 100
-draw_text_wrapped(0, 0, line_width, contents.font.size + 2, str)
+draw_text_wrapped(0, 0, line_width, contents.font.size + 2, text)
 ```
 With line break command (`\n`):
 ```Ruby
-str = "Testing\n line\n breaks"
+text = "Testing\n line\n breaks"
 line_width = 100
-draw_text_wrapped(0, 0, line_width, contents.font.size + 2, str)
+draw_text_wrapped(0, 0, line_width, contents.font.size + 2, text)
 ```
